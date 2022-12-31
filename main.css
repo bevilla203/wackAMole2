@@ -1,0 +1,141 @@
+/* 
+
+if i want something to go away, display should be none
+if I want it back, set display to block
+button.display = block
+
+*/
+
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(20, 190, 199);
+    cursor: url("")
+}
+
+#mainDiv{
+    background-color: #459a01;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+}
+
+#grass{
+    background-color: #459a01;
+    width: 500px;
+    height: 500px;
+
+    /* centers grass to be in the middle horizontally of MainDiv */
+    position: relative;
+
+    display: flex;
+    align-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+#scoreKeeper{
+    position: relative;
+    bottom: 300px;
+    left: 250px;
+}
+
+
+#holeHolder{
+    display: flex;
+    align-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.moleHole{
+    /* parent of hole and mole images */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 135px;
+    display: inline;
+
+}
+
+.hole{
+    /* img 1 */
+    height: 100px;
+    width: 100px;
+    margin-right: 50px;
+    margin-top: 30px;
+
+    /* the following puts the mole pic on top of the hole pic */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.mole{
+    /* img 2 */
+    /* the following puts the mole pic on top of the hole pic */
+    position: absolute;
+    top: 30px;
+    left: 5px;
+    height: 100px;
+    width: 100px;
+    /* this changes over time! */
+    display: none;
+}
+
+button{
+    background-color: #459a01;
+    padding-right: 5px;
+    border: none;
+    
+}
+
+h1, #scoreCard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    /* position absolute makes the text independent from other divs */
+    position: absolute;
+
+    bottom: 750px;
+    /* z-index is used to put score in front of everything */
+    z-index: 1;
+    margin: auto;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 251, 251);
+}
+#score{
+ padding-left: 2px;
+
+}
+#start{
+    position: absolute;
+    height: 33px;
+    width: 100px;
+    border-radius: 10%;
+    box-shadow: -2px 4px 5px #707070;
+    background-color: rgb(255, 255, 255);
+    top: 600px;
+}
+
+h1{
+    bottom: 850px;
+}
+
